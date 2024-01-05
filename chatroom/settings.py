@@ -43,7 +43,7 @@ MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
 ]
 
-CORS_ALLOWED_ORIGINS = ["http://localhost:3000", "http://127.0.0.1:3000", "https://react-chat-app-mu-eight.vercel.app"]
+CORS_ALLOWED_ORIGINS = ["*"]
 
 ROOT_URLCONF = "chatroom.urls"
 
