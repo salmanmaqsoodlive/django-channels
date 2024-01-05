@@ -1,4 +1,6 @@
 from channels.consumer import SyncConsumer, AsyncConsumer
+import django
+django.setup()
 from channels.exceptions import StopConsumer
 from asgiref.sync import sync_to_async
 from accounts.models import Chat, Group, User
