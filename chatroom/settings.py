@@ -15,7 +15,7 @@ SECRET_KEY = "django-insecure-!bw4nzvkfi6zjtu1*j6kq#0f^l$^dd_b8l5jvtx9uf=@1y^c4y
 
 DEBUG = True
 
-ALLOWED_HOSTS = ["https://react-chat-app-mu-eight.vercel.app"]
+ALLOWED_HOSTS = ["react-chat-app-mu-eight.vercel.app"]
 
 
 # Application definition
