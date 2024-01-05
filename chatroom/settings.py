@@ -1,8 +1,6 @@
 import os
 from pathlib import Path
-from dotenv import load_dotenv
 
-load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -11,13 +9,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-!bw4nzvkfi6zjtu1*j6kq#0f^l$^dd_b8l5jvtx9uf=@1y^c4y'
+SECRET_KEY = "django-insecure-!bw4nzvkfi6zjtu1*j6kq#0f^l$^dd_b8l5jvtx9uf=@1y^c4y"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
 DEBUG = True
 
-ALLOWED_HOSTS = [".vercel.app"]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
