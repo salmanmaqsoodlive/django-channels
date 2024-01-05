@@ -25,6 +25,7 @@ def register_user(request):
 
 @api_view(["POST"])
 def login(request):
+    print("request.headers", request.headers)
     serializer = LoginSerializer(data=request.data)
     if serializer.is_valid():
         token = JWTAuthentication.generate_token(payload=serializer.data)
@@ -68,7 +69,7 @@ def read_receipt(request):
         jwt_auth = JWTAuthentication()
         user, _ = jwt_auth.authenticate(request)
         auth_user = User.objects.get(email=user)
-        chat_ids = request.data.get('chat_ids', [])
+        chat_ids = request.data.get("chat_ids", [])
         # Update is_read for multiple chat IDs
         Chat.objects.filter(
             Q(receiver_id=auth_user.id) | Q(sender_id=auth_user.id), id__in=chat_ids
