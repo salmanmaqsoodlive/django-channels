@@ -7,7 +7,8 @@ After=network.target
 User=root
 Group=www-data
 WorkingDirectory=/var/lib/jenkins/workspace/django-channels
-ExecStart=/var/lib/jenkins/workspace/django-channels/venv/bin/gunicorn --workers 3 --log-level debug --error-logfile /var/lib/jenkins/workspace/django-channels/error.log --bind unix:/run/gunicorn.sock app.wsgi:application
+ExecStart=/var/lib/jenkins/workspace/django-channels/venv/bin/gunicorn --workers 3 --log-level debug --error-logfile /var/lib/jenkins/workspace/django-channels/error.log --bind unix:/run/gunicorn.sock project.routing:application
+
 
 [Install]
 WantedBy=multi-user.target
